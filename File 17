@@ -1,0 +1,160 @@
+import React from "react";
+import { Music, Mic, PenTool, Headphones } from "lucide-react";
+import { Card } from "../components/ui/card";
+
+const Bio = () => {
+  return (
+    <div className="min-h-screen bg-stone-900 text-stone-100">
+      {/* Hero Section */}
+      <section className="relative overflow-hidden bg-gradient-to-br from-red-950/30 via-stone-900 to-stone-900 py-20 lg:py-32">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(220,38,38,0.1),transparent_60%)]"></div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            
+            {/* Artist Image */}
+            <div className="order-2 lg:order-1">
+              <div className="relative">
+                <div className="w-full max-w-md mx-auto aspect-square bg-gradient-to-br from-red-600/20 to-stone-800 rounded-2xl flex items-center justify-center border border-red-600/30 p-8">
+                  <img 
+                    src="https://customer-assets.emergentagent.com/job_sound-spotlight/artifacts/vhlm25sg_file_000000007fc061fd80e4a99cd8b54d1c.png"
+                    alt="Dracul Dragon Logo"
+                    className="w-full h-full object-contain filter drop-shadow-lg"
+                  />
+                </div>
+                <div className="absolute -bottom-6 -right-6 w-24 h-24 bg-red-600/10 rounded-full border border-red-600/20"></div>
+                <div className="absolute -top-6 -left-6 w-16 h-16 bg-red-600/10 rounded-full border border-red-600/20"></div>
+              </div>
+            </div>
+
+            {/* Bio Content */}
+            <div className="order-1 lg:order-2">
+              <div className="mb-8">
+                <h1 className="text-5xl md:text-6xl font-bold text-red-500 mb-6 tracking-tight">
+                  DRACUL
+                </h1>
+                <p className="text-xl text-stone-300 mb-4">The Dragon | Independent Artist</p>
+                <div className="w-20 h-1 bg-red-600 rounded-full"></div>
+              </div>
+              
+              <div className="prose prose-invert prose-red max-w-none">
+                <p className="text-lg text-stone-300 leading-relaxed mb-8">
+                  Hey, I'm Dracul. Vocals & Instrumentation are Suno AI. All lyrics are written by me. I hope you enjoy my content.
+                </p>
+                
+                <div className="bg-stone-800/50 border border-red-800/30 rounded-lg p-6 mb-8">
+                  <h3 className="text-xl font-bold text-red-400 mb-4">About The Dragon</h3>
+                  <p className="text-stone-300 leading-relaxed mb-4">
+                    Named after the old Romanian word for "The Dragon," Dracul represents the fusion of human creativity 
+                    and artificial intelligence in music creation. While I harness the power of Suno AI for vocals and 
+                    instrumentation, every lyric flows from my own experiences, emotions, and artistic vision.
+                  </p>
+                  <p className="text-stone-300 leading-relaxed">
+                    My music spans the spectrum from soft rock's melodic introspection to metalcore's crushing intensity, 
+                    creating a unique sound that bridges human storytelling with AI precision. Each song is a battle between 
+                    light and darkness, forged in the fires of modern technology but tempered by timeless emotion.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Creative Process Section */}
+      <section className="py-20 bg-stone-800/30">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-red-400 mb-4">The Creative Process</h2>
+            <p className="text-stone-300 text-lg">How the dragon breathes life into metal</p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <Card className="bg-stone-800 border-red-800/30 hover:border-red-600/50 transition-all duration-200 group">
+              <div className="p-6 text-center">
+                <div className="w-16 h-16 bg-red-600/20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-red-600/30 transition-colors duration-200">
+                  <PenTool className="w-8 h-8 text-red-400" />
+                </div>
+                <h3 className="text-xl font-bold text-stone-100 mb-2">Lyrics</h3>
+                <p className="text-stone-400">Hand-crafted stories and emotions, written from personal experience and imagination</p>
+              </div>
+            </Card>
+
+            <Card className="bg-stone-800 border-red-800/30 hover:border-red-600/50 transition-all duration-200 group">
+              <div className="p-6 text-center">
+                <div className="w-16 h-16 bg-red-600/20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-red-600/30 transition-colors duration-200">
+                  <Music className="w-8 h-8 text-red-400" />
+                </div>
+                <h3 className="text-xl font-bold text-stone-100 mb-2">Instrumentation</h3>
+                <p className="text-stone-400">AI-powered arrangements that bring the written words to sonic life</p>
+              </div>
+            </Card>
+
+            <Card className="bg-stone-800 border-red-800/30 hover:border-red-600/50 transition-all duration-200 group">
+              <div className="p-6 text-center">
+                <div className="w-16 h-16 bg-red-600/20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-red-600/30 transition-colors duration-200">
+                  <Mic className="w-8 h-8 text-red-400" />
+                </div>
+                <h3 className="text-xl font-bold text-stone-100 mb-2">Vocals</h3>
+                <p className="text-stone-400">Suno AI delivers the emotional intensity that matches the lyrical content</p>
+              </div>
+            </Card>
+
+            <Card className="bg-stone-800 border-red-800/30 hover:border-red-600/50 transition-all duration-200 group">
+              <div className="p-6 text-center">
+                <div className="w-16 h-16 bg-red-600/20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-red-600/30 transition-colors duration-200">
+                  <Headphones className="w-8 h-8 text-red-400" />
+                </div>
+                <h3 className="text-xl font-bold text-stone-100 mb-2">Production</h3>
+                <p className="text-stone-400">Careful curation and refinement to create the final draconic experience</p>
+              </div>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Musical Journey Section */}
+      <section className="py-20">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-red-400 mb-4">Musical Evolution</h2>
+            <p className="text-stone-300 text-lg">The genres that shape the dragon's sound</p>
+          </div>
+
+          <div className="space-y-8">
+            <Card className="bg-stone-800 border-red-800/30">
+              <div className="p-8">
+                <h3 className="text-2xl font-bold text-red-400 mb-4">Soft Rock Foundation</h3>
+                <p className="text-stone-300 leading-relaxed">
+                  The melodic backbone that carries emotional storytelling, providing the canvas for introspective 
+                  lyrics about personal transformation and inner battles.
+                </p>
+              </div>
+            </Card>
+
+            <Card className="bg-stone-800 border-red-800/30">
+              <div className="p-8">
+                <h3 className="text-2xl font-bold text-red-400 mb-4">Hard Rock Power</h3>
+                <p className="text-stone-300 leading-relaxed">
+                  Driving rhythms and powerful guitar work that amplify the intensity of the dragon's roar, 
+                  perfect for anthemic choruses and moments of raw emotion.
+                </p>
+              </div>
+            </Card>
+
+            <Card className="bg-stone-800 border-red-800/30">
+              <div className="p-8">
+                <h3 className="text-2xl font-bold text-red-400 mb-4">Metal & Metalcore Edge</h3>
+                <p className="text-stone-300 leading-relaxed">
+                  The crushing weight and technical precision that brings darkness to light, delivering 
+                  the most intense emotional moments with uncompromising sonic brutality.
+                </p>
+              </div>
+            </Card>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+};
+
+export default Bio;
