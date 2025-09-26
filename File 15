@@ -1,0 +1,76 @@
+import React from "react";
+import { Link } from "react-router-dom";
+import { Music, Mail, ExternalLink } from "lucide-react";
+
+const Footer = () => {
+  const currentYear = new Date().getFullYear();
+
+  const links = [
+    { name: "Home", href: "/" },
+    { name: "Bio", href: "/bio" },
+    { name: "Blog", href: "/blog" },
+  ];
+
+  return (
+    <footer className="bg-stone-900 border-t border-red-800/30">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          
+          {/* Brand */}
+          <div className="md:col-span-2">
+            <Link to="/" className="flex items-center space-x-3 mb-6 group">
+              <div className="w-12 h-12 rounded-full overflow-hidden group-hover:scale-105 transition-transform duration-200">
+                <img 
+                  src="https://customer-assets.emergentagent.com/job_sound-spotlight/artifacts/vhlm25sg_file_000000007fc061fd80e4a99cd8b54d1c.png"
+                  alt="Dracul Dragon Logo"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <span className="text-3xl font-bold text-red-500 tracking-wide">
+                DRACUL
+              </span>
+            </Link>
+            <p className="text-stone-400 leading-relaxed max-w-md mb-6">
+              Independent metal artist forging powerful music through human creativity and AI collaboration. 
+              Where lyrics meet metal in perfect darkness.
+            </p>
+            <div className="flex items-center gap-2 text-stone-400">
+              <Mail className="w-4 h-4" />
+              <span>Contact for collaborations & bookings</span>
+            </div>
+          </div>
+
+          {/* Quick Links */}
+          <div>
+            <h3 className="text-lg font-bold text-red-400 mb-4">Quick Links</h3>
+            <nav className="space-y-3">
+              {links.map((link) => (
+                <Link
+                  key={link.name}
+                  to={link.href}
+                  className="block text-stone-300 hover:text-red-400 transition-colors duration-200"
+                >
+                  {link.name}
+                </Link>
+              ))}
+            </nav>
+          </div>
+        </div>
+
+        {/* Bottom Bar */}
+        <div className="mt-12 pt-8 border-t border-red-800/30 flex flex-col md:flex-row items-center justify-between">
+          <p className="text-stone-400 text-sm mb-4 md:mb-0">
+            © {currentYear} Dracul. All rights reserved.
+          </p>
+          <div className="flex items-center gap-6 text-sm">
+            <span className="text-stone-500">
+              Powered by human creativity & Suno AI
+            </span>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;
