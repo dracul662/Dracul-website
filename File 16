@@ -1,0 +1,215 @@
+import React from "react";
+import { Link } from "react-router-dom";
+import { Play, Music, ExternalLink } from "lucide-react";
+import { Button } from "../components/ui/button";
+import { Card } from "../components/ui/card";
+
+const Home = () => {
+  // Placeholder for upcoming tracks
+  const featuredTracks = [
+    {
+      id: 1,
+      title: "Embers - Out Now",
+      album: "New Release",
+      duration: "--:--",
+      coverArt: "https://customer-assets.emergentagent.com/job_sound-spotlight/artifacts/tec6nnr7_1000003472~2.jpg",
+      link: "https://distrokid.com/hyperfollow/dracul/embers"
+    },
+    {
+      id: 2,
+      title: "Scratch The Surface - Out Now",
+      album: "New Release",
+      duration: "--:--",
+      coverArt: "https://customer-assets.emergentagent.com/job_sound-spotlight/artifacts/8yvyyzup_1000003472~2.jpg",
+      link: "https://distrokid.com/hyperfollow/dracul/scratch-the-surface"
+    },
+    {
+      id: 3,
+      title: "Pick Up The Phone - Out Now",
+      album: "New Release", 
+      duration: "--:--",
+      coverArt: "https://customer-assets.emergentagent.com/job_sound-spotlight/artifacts/tec6nnr7_1000003472~2.jpg",
+      link: "https://distrokid.com/hyperfollow/dracul/pick-up-the-phone"
+    },
+    {
+      id: 4,
+      title: "My Linktree",
+      album: "All Links", 
+      duration: "--:--",
+      coverArt: "https://customer-assets.emergentagent.com/job_sound-spotlight/artifacts/vhlm25sg_file_000000007fc061fd80e4a99cd8b54d1c.png",
+      link: "https://linktr.ee/dracul_lyrics"
+    },
+  ];
+
+  const recentBlogPosts = [
+    {
+      id: 1,
+      title: "Welcome to the Dragon's Lair",
+      excerpt: "Starting my journey as an independent metal artist, blending human creativity with AI assistance...",
+      date: "2024-12-28",
+      readTime: "3 min read"
+    },
+    {
+      id: 2, 
+      title: "The Creative Process Behind Dracul",
+      excerpt: "How I craft lyrics and work with Suno AI to bring my musical vision to life...",
+      date: "2024-12-25",
+      readTime: "4 min read"
+    }
+  ];
+
+  return (
+    <div className="min-h-screen bg-stone-900 text-stone-100">
+      {/* Hero Section */}
+      <section className="relative overflow-hidden bg-gradient-to-br from-stone-900 via-red-950/20 to-stone-900 py-20 lg:py-32">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_40%,rgba(220,38,38,0.1),transparent_70%)]"></div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <div className="mb-8">
+              <div className="inline-block p-4 bg-red-600/10 rounded-full border border-red-600/20 mb-6">
+                <img 
+                  src="https://customer-assets.emergentagent.com/job_sound-spotlight/artifacts/vhlm25sg_file_000000007fc061fd80e4a99cd8b54d1c.png"
+                  alt="Dracul Dragon Logo"
+                  className="w-16 h-16 object-contain filter drop-shadow-lg"
+                />
+              </div>
+              <h1 className="text-6xl md:text-8xl font-bold tracking-tight mb-6">
+                <span className="text-red-500">DRACUL</span>
+              </h1>
+              <p className="text-xl md:text-2xl text-stone-300 mb-4">
+                The Dragon Awakens
+              </p>
+              <p className="text-lg text-stone-400 max-w-2xl mx-auto leading-relaxed">
+                Forging the sounds of soft rock, hard rock, and metalcore. 
+                Where human lyrics meet AI instrumentation in perfect darkness.
+              </p>
+            </div>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button 
+                size="lg" 
+                className="bg-red-600 hover:bg-red-500 text-white px-8 py-3 text-lg font-semibold rounded-full transition-all duration-200 hover:scale-105"
+                onClick={() => window.open('https://linktr.ee/dracul_lyrics', '_blank')}
+              >
+                <Play className="w-5 h-5 mr-2" />
+                Listen Now
+              </Button>
+              <Button 
+                variant="outline" 
+                size="lg"
+                className="border-red-600 text-red-400 hover:bg-red-600 hover:text-white px-8 py-3 text-lg font-semibold rounded-full transition-all duration-200"
+                asChild
+              >
+                <Link to="/bio">
+                  Discover My Story
+                </Link>
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Featured Music Section */}
+      <section className="py-20 bg-stone-800/50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-red-400 mb-4">Music</h2>
+            <p className="text-stone-300 text-lg">Pick Up The Phone - Out Now!</p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {featuredTracks.map((track) => (
+              <Card key={track.id} className="bg-stone-800 border-red-800/30 hover:border-red-600/50 transition-all duration-200 hover:shadow-lg hover:shadow-red-900/25 group">
+                <div className="p-6">
+                  <div className="relative mb-4 overflow-hidden rounded-lg">
+                    <img 
+                      src={track.coverArt} 
+                      alt={track.title}
+                      className="w-full h-48 object-cover transition-transform duration-200 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-red-600/20 opacity-0 group-hover:opacity-100 transition-opacity duration-200 flex items-center justify-center">
+                      {track.link ? (
+                        <Button 
+                          size="sm" 
+                          className="bg-red-600 hover:bg-red-500 rounded-full p-3"
+                          onClick={() => window.open(track.link, '_blank')}
+                        >
+                          <Play className="w-6 h-6" />
+                        </Button>
+                      ) : (
+                        <Button size="sm" className="bg-red-600 hover:bg-red-500 rounded-full p-3">
+                          <Play className="w-6 h-6" />
+                        </Button>
+                      )}
+                    </div>
+                  </div>
+                  
+                  {track.link ? (
+                    <a 
+                      href={track.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block"
+                    >
+                      <h3 className="text-xl font-bold text-stone-100 mb-2 hover:text-red-400 transition-colors duration-200">{track.title}</h3>
+                    </a>
+                  ) : (
+                    <h3 className="text-xl font-bold text-stone-100 mb-2">{track.title}</h3>
+                  )}
+                  <p className="text-red-400 font-medium mb-2">{track.album}</p>
+                  <p className="text-stone-400 text-sm">{track.duration}</p>
+                </div>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Latest News Section */}
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between mb-16">
+            <div>
+              <h2 className="text-4xl font-bold text-red-400 mb-4">Latest News</h2>
+              <p className="text-stone-300 text-lg">Stay updated on my musical journey</p>
+            </div>
+            <Button variant="outline" className="border-red-600 text-red-400 hover:bg-red-600 hover:text-white" asChild>
+              <Link to="/blog">
+                View All Posts
+                <ExternalLink className="w-4 h-4 ml-2" />
+              </Link>
+            </Button>
+          </div>
+          
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {recentBlogPosts.map((post) => (
+              <Card key={post.id} className="bg-stone-800 border-red-800/30 hover:border-red-600/50 transition-all duration-200 hover:shadow-lg hover:shadow-red-900/25 group">
+                <div className="p-8">
+                  <div className="mb-4">
+                    <span className="text-red-400 font-medium text-sm">{post.date} • {post.readTime}</span>
+                  </div>
+                  <h3 className="text-2xl font-bold text-stone-100 mb-4 group-hover:text-red-400 transition-colors duration-200">
+                    <Link to={`/blog/${post.id}`}>
+                      {post.title}
+                    </Link>
+                  </h3>
+                  <p className="text-stone-300 leading-relaxed mb-6">{post.excerpt}</p>
+                  <Link 
+                    to={`/blog/${post.id}`}
+                    className="text-red-400 font-semibold hover:text-red-300 transition-colors duration-200 flex items-center"
+                  >
+                    Read More
+                    <ExternalLink className="w-4 h-4 ml-2" />
+                  </Link>
+                </div>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+};
+
+export default Home; 
+**Only 4 more files to go!** 🎸
