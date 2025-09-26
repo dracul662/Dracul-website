@@ -1,0 +1,61 @@
+
+// Mock data for blog posts and other content
+
+export const mockBlogPosts = [
+  {
+    id: 1,
+    title: "Welcome to the Dragon's Lair",
+    excerpt: "Starting my journey as an independent metal artist, blending human creativity with AI assistance to create authentic musical experiences.",
+    content: [
+      "Welcome to my digital domain. I'm Dracul, and this is where my musical journey begins to take shape in the digital realm.",
+      "As an independent artist, I've chosen a unique path that combines my passion for writing lyrics with the power of AI technology to create complete musical experiences.",
+      "Every song starts with words that come from real experiences, real emotions, and real stories that need to be told. This is where my humanity shines through.",
+      "The name Dracul, meaning 'The Dragon' in old Romanian, represents transformation and power. Just as dragons are mythical creatures of immense strength, I aim to create music that has lasting impact.",
+      "This website will be my hub for sharing new music, thoughts on the creative process, and connecting with listeners who appreciate authentic storytelling in metal.",
+      "Stay tuned for updates on new releases and insights into how modern technology is reshaping independent music creation."
+    ],
+    category: "personal",
+    date: "2024-12-28",
+    readTime: "3 min read",
+    tags: ["welcome", "introduction", "dracul", "independent-music"],
+    image: "https://customer-assets.emergentagent.com/job_sound-spotlight/artifacts/vhlm25sg_file_000000007fc061fd80e4a99cd8b54d1c.png"
+  },
+  {
+    id: 2,
+    title: "The Creative Process Behind Dracul",
+    excerpt: "How I craft lyrics and work with Suno AI to bring my musical vision to life, creating authentic metal experiences.",
+    content: [
+      "Creating music as Dracul is a unique blend of traditional songwriting and modern AI collaboration.",
+      "Every track begins with lyrics written from personal experience. I draw from real emotions - anger, triumph, loss, transformation - to create authentic stories.",
+      "Once I have the lyrical foundation, I work with Suno AI to bring the musical arrangement to life. The AI handles the technical aspects of instrumentation and vocals.",
+      "What makes this process special is that the AI doesn't replace creativity - it amplifies it. I maintain complete creative control over the message and emotional direction.",
+      "The result is music that combines human storytelling with technical precision, creating something that neither human nor AI could achieve alone.",
+      "This collaborative approach allows me to focus on what I do best - crafting meaningful lyrics - while ensuring the final product has professional-quality production."
+    ],
+    category: "process",
+    date: "2024-12-25",
+    readTime: "4 min read",
+    tags: ["creative-process", "suno-ai", "songwriting", "collaboration"],
+    image: "https://customer-assets.emergentagent.com/job_sound-spotlight/artifacts/vhlm25sg_file_000000007fc061fd80e4a99cd8b54d1c.png"
+  },
+  {
+    id: 3,
+    title: "The Evolution of Independent Music",
+    excerpt: "How technology is democratizing music creation and giving independent artists new ways to compete and create.",
+    content: [
+      "The music industry is experiencing a revolution, and independent artists are at the forefront of this change.",
+      "Technology has removed many of the traditional barriers that once made music production expensive and inaccessible.",
+      "Platforms like Suno AI are democratizing the creation process, allowing artists with strong creative vision to produce professional-quality music.",
+      "This doesn't mean replacing human creativity - it means expanding what's possible for individual artists to achieve.",
+      "Independent musicians can now compete on artistic merit rather than budget constraints or industry connections.",
+      "The future belongs to artists who can adapt and use these new tools to enhance their creative expression."
+    ],
+    category: "technology",
+    date: "2024-12-22",
+    readTime: "5 min read",
+    tags: ["independent-music", "technology", "AI", "music-industry"],
+    image: "https://customer-assets.emergentagent.com/job_sound-spotlight/artifacts/vhlm25sg_file_000000007fc061fd80e4a99cd8b54d1c.png"
+  }
+];
+
+export default mockBlogPosts;
